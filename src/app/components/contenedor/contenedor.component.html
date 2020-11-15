@@ -1,0 +1,104 @@
+<div class="wrapper">
+  <div class="top">
+    <div class="cont">
+      <div class="title">
+        <a href="/">Alquileres</a>
+      </div>
+    </div>
+  </div>
+  <div class="contenido">
+    <div class="formulario">
+      <div class="header">
+        <i class="material-icons">playlist_add</i>
+        Nuevo Alquiler
+      </div>
+      <form>
+        <div class="inputs">
+          <input
+            type="text"
+            name="direccion"
+            [(ngModel)]="alquiler.direccion"
+            placeholder="Dirección"
+            autofocus
+          />
+
+          <input
+            type="time"
+            name="hora_in"
+            [(ngModel)]="alquiler.hora_in"
+            placeholder="Hora Inicial"
+            autofocus
+          />
+          <input
+            type="time"
+            name="hora_fin"
+            [(ngModel)]="alquiler.hora_fin"
+            placeholder="Hora Final"
+            autofocus
+          />
+
+          <input
+            type="text"
+            name="num_hrs"
+            [(ngModel)]="alquiler.num_hrs"
+            placeholder="Horas"
+            autofocus
+          />
+
+          <input
+            type="text"
+            name="saldo"
+            [(ngModel)]="alquiler.saldo"
+            placeholder="Saldo"
+            autofocus
+          />
+
+          <input
+            type="text"
+            name="num_lav_fk"
+            [(ngModel)]="alquiler.num_lav_fk"
+            placeholder="Lavadora"
+            autofocus
+          />
+        </div>
+
+        <div class="button">
+          <button (click)="guardarAlquiler()">
+            AGREGAR
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="listado">
+      <div class="header">
+        <div class="colid">Id</div>
+        <div class="col">Dirección</div>
+        <div class="col">Incio</div>
+        <div class="col">Fin</div>
+        <div class="col">Horas</div>
+        <div class="col">Saldo</div>
+        <div class="col">Lavadora</div>
+        <div class="colop">Operaciones</div>
+      </div>
+      <div class="lista" *ngFor="let alquiler of alquileres">
+        <div class="colid">{{ alquiler.id }}</div>
+        <div class="col">{{ alquiler.direccion }}</div>
+        <div class="col">{{ alquiler.hora_in }}</div>
+        <div class="col">{{ alquiler.hora_fin }}</div>
+        <div class="col">{{ alquiler.num_hrs }}</div>
+        <div class="col">{{ alquiler.saldo }}</div>
+        <div class="col">{{ alquiler.num_lav_fk }}</div>
+        <div class="colP">
+          <button class="btnDelete" (click)="deleteAlquiler(alquiler.id)">
+            <!-- <i class="far fa-trash-alt">X</i> -->
+            ELIMINAR
+          </button>
+          <button class="btnUpdate" (click)="updateAlquiler(alquiler.id)">
+            <!-- <i class="far fa-trash-alt">X</i> -->
+            EDITAR
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+.nav {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: white;
+  /* box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); */
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, .56), 0 4px 25px 0 rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+}
+
+.nav .logo {
+  padding: 15px 0;
+  margin: 0;
+  display: block;
+  position: relative;
+  z-index: 4;
+}
+
+.nav .logo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  height: 1px;
+  width: calc(100% - 30px);
+  background-color: rgba(180, 180, 180, .3);
+}
+
+.nav .logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 0;
+  font-size: 18px;
+  color: #3c4858;
+  white-space: nowrap;
+  font-weight: 400;
+  line-height: 30px;
+  overflow: hidden;
+  text-align: center;
+  display: block;
+}
+
+.nav .list {
+  margin-top: 20px;
+  display: block;
+}
+
+.nav .list li {
+  list-style: none;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.nav .list li a {
+  display: block;
+  text-decoration: none;
+  margin: 10px 15px 0;
+  border-radius: 3px;
+  color: #3c4858;
+  text-transform: capitalize;
+  font-size: 13px;
+  padding: 10px 15px;
+}
+
+.nav .list li.active>a {
+  /* FONDO */
+  /* background-color: #f44336; */
+  /* background: linear-gradient(60deg, #66bb6a, #43a047);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(244, 67, 54, .4); */
+  background-color: #4caf50;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(76, 175, 80, .4);
+}
+
+.nav .list li.active>a, .nav .list li.active>a i {
+  color: #fff;
+}
+
+.nav .list li a i {
+  font-size: 24px;
+  float: left;
+  margin-right: 15px;
+  line-height: 30px;
+  width: 30px;
+  text-align: center;
+  color: #a9afbb;
+}
+
+.nav .list li p {
+  margin: 0;
+  line-height: 30px;
+  font-size: 14px;
+  position: relative;
+  display: block;
+  height: auto;
+  white-space: nowrap;
+}
+
+.nav .list .info {
+  position: absolute;
+  width: 100%;
+  bottom: 13px;
+}
+
+/* .nav .wrapper {
+  width: 90%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.nav .wrapper .content {
+  height: 100%;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.nav .wrapper .content h1 {
+  margin: 0;
+  margin-right: 5rem;
+}
+
+.nav .wrapper .content a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 2.5rem;
+} */
